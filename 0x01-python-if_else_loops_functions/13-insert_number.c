@@ -48,6 +48,6 @@ listint_t *insert_node(listint_t **head, int number)
 		temp->next = new_node;
 		new_node->next = NULL;
 	}
-	free(new_node);
+	/* free(new_node); */
 	return (NULL);
 }
