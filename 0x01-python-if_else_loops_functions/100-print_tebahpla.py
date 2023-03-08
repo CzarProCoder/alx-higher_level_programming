@@ -1,12 +1,10 @@
-#!/usr/bin/python3
+# !/usr/bin/python3
 
-for i in range(122, 96, -2):
-    '''
-    if 1 % 10 == 0:
-        letter = chr(i)
-    else:
-        letter = chr(i - 32)
-    '''
-    print(f"{chr(i)}", end="")
-    i = (i - 1) - 32
-    print(f"{chr(i)}", end="")
+i = 122
+while i > 96:
+    if i % 2 != 0:
+        i -= 32
+    print("{}".format(chr(i)), end="")
+    if i < 90:
+        i += 32
+    i -= 1
