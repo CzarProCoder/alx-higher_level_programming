@@ -18,10 +18,34 @@ class Square:
         else:
             self.__size = size
 
+    @property
+    def size(self):
+        """
+        property setter
+
+        Returns:
+            size (int): Returns the private attribute size
+        """
+        return (self.__size)
+
+    @size.setter
+    def size(self, value):
+        """
+        property setter
+
+        Args:
+            size (int): Only parameter is size which is a private attribute
+        """
+        if not isinstance(value, int):
+            raise TypeError("size must be an integer")
+        elif value < 0:
+            raise ValueError("size must be >= 0")
+        else:
+            self.__size = value
+
     def area(self):
         """Instance method to find area of Square
         Returns:
             area (int): area of the square
         """
-        self.area = self.__size ** 2
-        return (self.area)
+        return (self.__size ** 2)
