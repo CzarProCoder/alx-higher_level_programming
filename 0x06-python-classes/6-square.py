@@ -11,6 +11,14 @@ class Square:
         Args:
              size (int): size of the new square
              position (tuple): tuple of 2 positive integers
+        Functions:
+            __init__(self, size, position)
+            size(self)
+            size(self, value)
+            position(self)
+            position(self, value)
+            area(self)
+            my_print(self)
         """
         self.size = size
         self.position = position
