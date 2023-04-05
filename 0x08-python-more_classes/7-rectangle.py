@@ -13,7 +13,7 @@ class Rectangle:
         Increments by 1 when a rectange instance is created
         Decrements by 1 when a rectange is destroyed
 
-        print_symbol (str): Used as symbol for string representation
+        print_symbol (any): Used as symbol for string representation
     """
     number_of_instances = 0
     print_symbol = "#"
@@ -119,7 +119,7 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return (rect)
         for i in range(self.__height):
-            rect += ("#" * self.__width) + "\n"
+            rect += (str(self.print_symbol) * self.__width) + "\n"
         return rect[:-1]
 
     def __repr__(self):
