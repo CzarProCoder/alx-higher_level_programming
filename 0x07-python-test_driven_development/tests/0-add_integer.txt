@@ -10,7 +10,7 @@ Importing the function to test
 
 
 SUCCESS CASES:
-
+    Test use of unsigned and signed integers
         >>> add_integer(22)
         120
 
@@ -39,8 +39,20 @@ FAIL CASES:
             ...
         TypeError: a must be an integer
 
-    Passing a string
+    Passing a single string
         >>> add_integer("CzarProcoder")
+        Traceback (most recent call last):
+            ...
+        TypeError: a must be an integer
+
+    Passing an integer and string
+        >>> add_integer(43, "CzarProCoder")
+        Traceback (most recent call last):
+            ...
+        TypeError: b must be an integer
+    
+    Passing two strings
+        >>> add_integer("https://lyonec.com", "CzarProCoder")
         Traceback (most recent call last):
             ...
         TypeError: a must be an integer
@@ -50,6 +62,7 @@ FAIL CASES:
         Traceback (most recent call last):
             ...
         TypeError: a must be an integer
+
     Passing a list
         >>> add_integer([45, 1])
         Traceback (most recent call last):
