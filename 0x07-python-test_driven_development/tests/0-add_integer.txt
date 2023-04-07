@@ -80,3 +80,9 @@ FAIL CASES:
         Traceback (most recent call last):
             ...
         OverflowError: cannot convert float infinity to integer
+
+    Passing no argument
+        >>> add_integer(3, None)
+        Traceback (most recent call last):
+            ...
+        TypeError: b must be an integer
