@@ -26,6 +26,9 @@ SUCCESS CASES:
         >>> add_integer(-2, 56)
         54
 
+        >>> add_integer()
+        98
+
 FAIL CASES:
     Passing a single character
         >>> add_integer("a")
