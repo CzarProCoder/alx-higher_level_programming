@@ -1,0 +1,57 @@
+=============================================
+"0-add_integer.py"
+=============================================
+Uses the "add_integer" function
+=============================================
+
+Importing the function to test
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+
+SUCCESS CASES:
+
+        >>> add_integer(22)
+        120
+
+        >>> add_integer(22, 21)
+        43
+
+        >>> add_integer(2.87, 3)
+        5.87
+
+        >>> add_integer(0, 0)
+        0
+
+        >>> add_integer(-2, 56)
+        54
+
+FAIL CASES:
+    Passing a single character
+        >>> add_integer("a")
+        Traceback (most recent call last):
+            ...
+        TypeError: a must be an integer
+
+    Passing two characters
+        >>> add_integer("g", "h")
+        Traceback (most recent call last):
+            ...
+        TypeError: a must be an integer
+
+    Passing a string
+        >>> add_integer("CzarProcoder")
+        Traceback (most recent call last):
+            ...
+        TypeError: a must be an integer
+
+    Passing a tuple
+        >>> add_integer((1, 1))
+        Traceback (most recent call last):
+            ...
+        TypeError: a must be an integer
+    Passing a list
+        >>> add_integer([45, 1])
+        Traceback (most recent call last):
+            ...
+        TypeError: a must be an integer
