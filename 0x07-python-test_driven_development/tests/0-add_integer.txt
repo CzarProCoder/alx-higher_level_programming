@@ -68,3 +68,15 @@ FAIL CASES:
         Traceback (most recent call last):
             ...
         TypeError: a must be an integer
+
+    Passing a NaN Number
+        >>> add_integer(0, float('NaN'))
+        Traceback (most recent call last):
+            ...
+        ValueError: cannot convert float NaN to integer
+
+    Case Overflow
+        >>> add_integer(float("inf"))
+        Traceback (most recent call last):
+            ...
+        OverflowError: cannot convert float infinity to integer
