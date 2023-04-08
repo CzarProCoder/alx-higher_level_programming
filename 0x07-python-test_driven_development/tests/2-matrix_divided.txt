@@ -1,0 +1,56 @@
+======================================
+Test file for 2-matrix_divided module
+======================================
+Function to test: matrix_divided
+======================================
+
+
+Importing the function
+
+    matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+SUCCESS CASES:
+Passing a complete matrix
+    >>> matrix = [[3, 9, 12], [15, 21, 12], [90, 30, 60]]
+    >>> print(matrix_divided(matrix, 3))
+    [[1.0, 3.0, 4.0], [5.0, 7.0, 4.0], [30.0, 10.0, 20.0]]
+
+Passing a float matrix
+    >>> print(matrix_divided(matrix3, 2))
+    [[2.3, 6.1], [20.41, 9.64]]
+
+
+FAIL CASES:
+Passing a matrix with different number of rows
+    >>> matrix1 = [[2, 7], [2, 6, 8]]
+    >>> print(matrix_divided(matrix1, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: Each row of the matrix must                             have the same size
+
+Passing a list instead of matrix
+    >>> matrix1 = [2, 7]
+    >>> print(matrix_divided(matrix1, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix                             (list of lists) of integers/floats
+
+Passing None instead of matrix
+    >>> print(matrix_divided(None, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix                             (list of lists) of integers/floats
+
+Passing a string as div
+    >>> matrix1 = [[2, 4, 6], [8, 14, 4]]
+    >>> print(matrix_divided(matrix1, "https://lyonec.com"))
+    Traceback (most recent call last):
+        ...
+    TypeError: div must be a number
+
+Passing zero (0) as div
+    >>> matrix1 = [[2, 4, 6], [8, 14, 4]]
+    >>> print(matrix_divided(matrix1, 0))
+    Traceback (most recent call last):
+        ...
+    ZeroDivisionError: division by zero
