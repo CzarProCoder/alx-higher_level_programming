@@ -46,7 +46,7 @@ def matrix_divided(matrix, div):
             if not isinstance(value, (float, int)):
                 raise TypeError(msg1)
             new_value = value / div
-            new_list.append(new_value)
+            new_list.append(round(new_value, 2))
             item_index += 1
         new_matrix.append(new_list)
         matrix_index += 1
