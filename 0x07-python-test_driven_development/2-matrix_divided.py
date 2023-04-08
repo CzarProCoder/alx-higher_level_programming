@@ -18,35 +18,33 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-
+    msg1 = "matrix must be a matrix (list of lists) of integers/floats"
+    msg2 = "Each row of the matrix must have the same size"
     if not isinstance(matrix, list):
-        raise TypeError("matrix must be a matrix \
-                        (list of lists) of integers/floats")
+        raise TypeError(msg1)
 
     matrix_len = len(matrix)
     matrix_index = 0
 
     if not isinstance(matrix[0], list):
-        raise TypeError("matrix must be a matrix \
-                            (list of lists) of integers/floats")
+        raise TypeError(msg1)
+    if matrix_len < 2:
+        raise TypeError(msg1)
     list_len = len(matrix[0])
     new_matrix = []
 
     for matrix_item in matrix:
         if not isinstance(matrix_item, list):
-            raise TypeError("matrix must be a matrix \
-                            (list of lists) of integers/floats")
+            raise TypeError(msg1)
         if len(matrix_item) != list_len:
-            raise TypeError("Each row of the matrix must \
-                            have the same size")
+            raise TypeError(msg2)
 
         item_index = 0
         new_list = []
 
         for value in matrix_item:
             if not isinstance(value, (float, int)):
-                raise TypeError("matrix must be a matrix \
-                                (list of lists) of integers/floats")
+                raise TypeError(msg1)
             new_value = value / div
             new_list.append(new_value)
             item_index += 1
