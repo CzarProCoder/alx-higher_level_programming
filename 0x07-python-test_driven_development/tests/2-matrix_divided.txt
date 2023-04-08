@@ -15,9 +15,14 @@ Passing a complete matrix
     >>> print(matrix_divided(matrix, 3))
     [[1.0, 3.0, 4.0], [5.0, 7.0, 4.0], [30.0, 10.0, 20.0]]
 
+    >>> matrix3 = [[42, 16], [13, 2]]
+    >>> print(matrix_divided(matrix3, 7))
+    [[6.0, 2.29], [1.86, 0.29]]
+
 Passing a float matrix
+    >>> matrix3 = [[24.42, 45.26], [8.624, 84.32]]
     >>> print(matrix_divided(matrix3, 2))
-    [[2.3, 6.1], [20.41, 9.64]]
+    [[12.21, 22.63], [4.31, 42.16]]
 
 
 FAIL CASES:

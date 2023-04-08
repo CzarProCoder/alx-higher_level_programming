@@ -1,0 +1,38 @@
+=========================================
+This is a test file for '3-say_my_name.py'
+=========================================
+
+Import say_my_name function from 3-say_my_name.py
+
+    say_my_name = __import__('3-say_my_name').say_my_name
+
+SUCCESS CASES
+Passing both first_name and last_name
+    >>> say_my_name("Julius", "Kinyua")
+    My name is Julius Kinyua
+
+Passing first_name only
+    >>> say_my_name("Julius")
+    My name is Julius
+
+
+
+FAILED CASES
+Passing a string and a number
+    >>> say_my_name("Julius", 1564)
+    Traceback (most recent call last):
+        ...
+    raise TypeError("last_name must be a string")
+    TypeError: last_name must be a string
+
+Passing boolean instead of strings
+    >>> say_my_name(True, False)
+    Traceback (most recent call last):
+        ...
+    TypeError: first_name must be a string
+
+Passing Nothing
+    >>> say_my_name()
+    Traceback (most recent call last):
+        ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
