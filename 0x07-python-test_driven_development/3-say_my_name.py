@@ -9,8 +9,8 @@ def say_my_name(first_name, last_name=""):
     Function to calculate print the first and last_name
 
     Args:
-        first_name: First name to be printed
-        last_name: Last_name to be printed
+        first_name (str): First name to be printed
+        last_name (str): Last_name to be printed
     """
     if not isinstance(first_name, str):
         raise TypeError("first_name must be a string")
