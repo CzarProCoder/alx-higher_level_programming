@@ -54,3 +54,10 @@ Passing zero (0) as div
     Traceback (most recent call last):
         ...
     ZeroDivisionError: division by zero
+
+Passing a matrix of characters and strings
+    >>> matrix = [['c', 'Jones'],['Julien', 'b']]
+    >>> print(matrix_divided(matrix, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: matrix must be a matrix                                 (list of lists) of integers/floats
