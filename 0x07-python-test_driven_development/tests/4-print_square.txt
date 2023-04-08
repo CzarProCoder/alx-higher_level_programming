@@ -1,0 +1,81 @@
+========================================
+Test file for '4-print_square.py' module
+========================================
+Function to test: print_square
+========================================
+
+Importing the function from module
+    print_square = __import__('4-print_square').print_square
+
+SUCCESS CASES:
+Passing 4
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+Passing 0
+    >>> print_square(0)
+
+Passing 10
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+FAIL CASES:
+Passing a negative number
+    >>> print_square(-4)
+    Traceback (most recent call last):
+        ...
+    ValueError: size must be >= 0
+
+Passing a float
+    >>> print_square(5.2)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Passing a character
+    >>> print_square('g')
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Passing a string
+    >>> print_square('CzarProCoder')
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Passing a list
+    >>> print_square([2, 7, 9])
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Passing Nothing
+    >>> print_square()
+    Traceback (most recent call last):
+        ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
+
+Passing None
+    >>> print_square(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: size must be an integer
+
+Passing a boolean
+    >>> print_square(False)
+    
+    >>> print_square(True)
+    #
