@@ -31,7 +31,6 @@ def matrix_divided(matrix, div):
     if matrix_len < 2:
         raise TypeError(msg1)
     list_len = len(matrix[0])
-    new_matrix = []
 
     for matrix_item in matrix:
         if not isinstance(matrix_item, list):
@@ -39,16 +38,17 @@ def matrix_divided(matrix, div):
         if len(matrix_item) != list_len:
             raise TypeError(msg2)
 
-        item_index = 0
-        new_list = []
+    new_matrix = []
+    item_index = 0
+    new_list = []
 
-        for value in matrix_item:
-            if not isinstance(value, (float, int)):
-                raise TypeError(msg1)
-            new_value = value / div
-            new_list.append(round(new_value, 2))
-            item_index += 1
-        new_matrix.append(new_list)
-        matrix_index += 1
+    for value in matrix_item:
+        if not isinstance(value, (float, int)):
+            raise TypeError(msg1)
+        new_value = value / div
+        new_list.append(round(new_value, 2))
+        item_index += 1
+    new_matrix.append(new_list)
+    matrix_index += 1
 
     return new_matrix
