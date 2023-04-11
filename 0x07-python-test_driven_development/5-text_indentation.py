@@ -15,7 +15,7 @@ def text_indentation(text):
     Returns:
         new-text (string): Returns new text with .?: being replaced by space
     """
-    if not isinstance(text, string):
+    if not isinstance(text, str):
         raise TypeError("text must be a string")
     for char in ".?:":
         text = text.replace(char, char + "\n\n")
