@@ -23,37 +23,37 @@ FAIL CASES
         >>> bg.integer_validator("Lyonec", 42.65)
         Traceback (most recent call last):
             ...
-        TypeError: <name> must be an integer
+        TypeError: Lyonec must be an integer
     
     Passing in a char instead of integer
         >>> bg.integer_validator("Lyonec", 'K')
         Traceback (most recent call last):
             ...
-        TypeError: <name> must be an integer
+        TypeError: Lyonec must be an integer
 
     Passing in a string instead of an integer
         >>> bg.integer_validator("Lyonec", 'Kinyua')
         Traceback (most recent call last):
             ...
-        TypeError: <name> must be an integer
+        TypeError: Lyonec must be an integer
 
     Passing in a list instead of integer
         >>> bg.integer_validator("Lyonec", [4, 6, 7])
         Traceback (most recent call last):
             ...
-        TypeError: <name> must be an integer
+        TypeError: Lyonec must be an integer
 
     Passing in a negative value
         >>> bg.integer_validator("Lyonec", -5)
         Traceback (most recent call last):
             ...
-        ValueError: <name> must be greater than 0
+        ValueError: Lyonec must be greater than 0
 
     Passing a zero(0)
         >>> bg.integer_validator("Lyonec", 0)
         Traceback (most recent call last):
             ...
-        ValueError: <name> must be greater than 0
+        ValueError: Lyonec must be greater than 0
 
     Passing in the first argument only
         >>> bg.integer_validator("Lyonec", )
@@ -70,15 +70,15 @@ FAIL CASES
         >>> bg.integer_validator("Lyonec", None)
         Traceback (most recent call last):
             ...
-        TypeError: <name> must be an integer
+        TypeError: Lyonec must be an integer
 
     Passing in a bolean
         >>> bg.integer_validator("Lyonec", True)
         Traceback (most recent call last):
             ...
-        TypeError: <name> must be an integer
+        TypeError: Lyonec must be an integer
 
         >>> bg.integer_validator("Lyonec", False)
         Traceback (most recent call last):
             ...
-        TypeError: <name> must be an integer
+        TypeError: Lyonec must be an integer
