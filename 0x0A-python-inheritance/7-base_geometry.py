@@ -18,6 +18,10 @@ class BaseGeometry():
     def integer_validator(self, name, value):
         """
         Function to validate a value
+
+        Args:
+            name (string): String to be used
+            value (int): Integer to be evaluated
         """
         if type(value) != int:
             raise TypeError("<name> must be an integer")

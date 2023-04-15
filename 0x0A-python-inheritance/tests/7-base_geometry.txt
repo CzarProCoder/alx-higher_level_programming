@@ -4,8 +4,81 @@ Import BaseGeometry from class from the Module
     BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 SUCCESS CASES
+    Passing in a string and a integer
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("Lyonec", 42)
 
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("Lyonec", 5)
+
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("Lyonec", 18859736913)        
+
+    
 
 
 FAIL CASES
+    Passing in a float instead of an integer
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("Lyonec", 42.65)
+        Traceback (most recent call last):
+            ...
+        TypeError: <name> must be an integer
+    
+    Passing in a char instead of integer
+        >>> bg.integer_validator("Lyonec", 'K')
+        Traceback (most recent call last):
+            ...
+        TypeError: <name> must be an integer
 
+    Passing in a string instead of an integer
+        >>> bg.integer_validator("Lyonec", 'Kinyua')
+        Traceback (most recent call last):
+            ...
+        TypeError: <name> must be an integer
+
+    Passing in a list instead of integer
+        >>> bg.integer_validator("Lyonec", [4, 6, 7])
+        Traceback (most recent call last):
+            ...
+        TypeError: <name> must be an integer
+
+    Passing in a negative value
+        >>> bg.integer_validator("Lyonec", -5)
+        Traceback (most recent call last):
+            ...
+        ValueError: <name> must be greater than 0
+
+    Passing a zero(0)
+        >>> bg.integer_validator("Lyonec", 0)
+        Traceback (most recent call last):
+            ...
+        ValueError: <name> must be greater than 0
+
+    Passing in the first argument only
+        >>> bg.integer_validator("Lyonec", )
+        Traceback (most recent call last):
+        ...
+        TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+        >>> bg.integer_validator("Lyonec")
+        Traceback (most recent call last):
+        ...
+        TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+
+    Passing in None instead of integer
+        >>> bg.integer_validator("Lyonec", None)
+        Traceback (most recent call last):
+            ...
+        TypeError: <name> must be an integer
+
+    Passing in a bolean
+        >>> bg.integer_validator("Lyonec", True)
+        Traceback (most recent call last):
+            ...
+        TypeError: <name> must be an integer
+
+        >>> bg.integer_validator("Lyonec", False)
+        Traceback (most recent call last):
+            ...
+        TypeError: <name> must be an integer
