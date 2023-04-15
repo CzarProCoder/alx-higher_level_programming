@@ -5,7 +5,7 @@ Module containing an empty class BaseGeometry.
 """
 
 
-def BaseGeometry():
+class BaseGeometry():
     """
     An empty class
     """
