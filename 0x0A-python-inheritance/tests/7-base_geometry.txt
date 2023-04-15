@@ -60,13 +60,13 @@ FAIL CASES
     Passing in the first argument only
         >>> bg.integer_validator("Lyonec", )
         Traceback (most recent call last):
-        ...
-        TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+            ...
+        TypeError: integer_validator() missing 1 required positional argument: 'value'
 
         >>> bg.integer_validator("Lyonec")
         Traceback (most recent call last):
-        ...
-        TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+            ...
+        TypeError: integer_validator() missing 1 required positional argument: 'value'
 
     Passing in None instead of integer
         >>> bg.integer_validator("Lyonec", None)
