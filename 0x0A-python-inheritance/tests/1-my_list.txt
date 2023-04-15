@@ -1,8 +1,8 @@
-Test Cases for '1-my_list.py'
+Test Cases for '1-my_list' module
 ============================================
 
-Importing the class from module
-    >>> MyList = __import__('1-my_list').MyList
+Importing the class from module:
+        >>> MyList = __import__('1-my_list').MyList
 
 SUCCESS CASES
     Appending values to the list
