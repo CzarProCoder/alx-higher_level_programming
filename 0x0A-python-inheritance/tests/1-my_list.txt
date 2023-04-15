@@ -80,7 +80,7 @@ SUCCESS CASES
         >>> my_list = MyList()
         >>> my_list.append(7)
         >>> print(my_list)
-        [8]
+        [7]
 
     Check if print_sorted() returns a new list
         >>> my_list = MyList()
