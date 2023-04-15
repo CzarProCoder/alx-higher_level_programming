@@ -33,7 +33,7 @@ class Rectangle(BaseGeometry):
         Args:
             width (int): Width of the rectangle
             length (int): Length of the rectangle
-        
+
         Returns:
             Areas of rectangle (width * length)
         """
