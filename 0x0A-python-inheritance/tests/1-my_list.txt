@@ -15,22 +15,22 @@ SUCCESS CASES
         >>> print(alist)
         [4, 3, 8, 5, 42]
 
-    Printing a sorted list 2 (repeated numbers)
-        >>> my_list = MyList()
-        >>> my_list.append(1)
-        >>> my_list += [1]
-        >>> my_list.append(2)
-        >>> my_list.append(2)
-        >>> my_list += [2]
-        >>> my_list.print_sorted()
-        [1, 1, 2, 2, 2]
+
+        >>> list1 = MyList()
+        >>> list1.append(8)
+        >>> list1 += [4]
+        >>> list1.append(3)
+        >>> list1.append(3)
+        >>> list1 += [3]
+        >>> list1.print_sorted()
+        [3, 3, 3, 4, 8]
 
 
     Printing an sorted list 3 (one number)
         >>> my_list = MyList()
-        >>> my_list += [3]
+        >>> my_list += [5]
         >>> my_list.print_sorted()
-        [3]
+        [5]
 
 
     Printing an sorted list 4 (positive and negative numbers)
@@ -78,9 +78,9 @@ SUCCESS CASES
 
     Check printable string
         >>> my_list = MyList()
-        >>> my_list.append(5)
+        >>> my_list.append(7)
         >>> print(my_list)
-        [5]
+        [8]
 
     Check if print_sorted() returns a new list
         >>> my_list = MyList()
@@ -93,12 +93,11 @@ SUCCESS CASES
         [7, 1, 2]
 
 FAILED CASES
-
     Print_sorted method with 1 passed argument
         >>> my_list = MyList()
         >>> my_list.print_sorted([4, 2, 3])
         Traceback (most recent call last):
-                ...
+            ...
         TypeError: print_sorted() takes 1 positional argument but 2 were given
 
 
@@ -106,6 +105,5 @@ FAILED CASES
         >>> my_list = MyList()
         >>> my_list.print_sorted([1, 2], [5, 3])
         Traceback (most recent call last):
-                ...
+            ...
         TypeError: print_sorted() takes 1 positional argument but 3 were given
-
