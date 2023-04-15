@@ -9,3 +9,4 @@ def BaseGeometry():
     """
     An empty class
     """
+    pass
