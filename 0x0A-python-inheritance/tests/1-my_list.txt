@@ -2,7 +2,7 @@ Test Cases for '1-my_list.py'
 ============================================
 
 Importing the class from module
-    MyList = __import__('1-my_list').MyList
+    >>> MyList = __import__('1-my_list').MyList
 
 SUCCESS CASES
     Appending values to the list
