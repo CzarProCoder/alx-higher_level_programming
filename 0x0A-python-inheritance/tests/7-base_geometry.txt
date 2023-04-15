@@ -44,6 +44,20 @@ FAIL CASES
         Traceback (most recent call last):
             ...
         TypeError: Lyonec must be an integer
+    
+    Passing in a tuple
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", (4,))
+        Traceback (most recent call last):
+            ...
+        TypeError: age must be an integer
+    
+    Passing in a set
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("age", {3, 4})
+        Traceback (most recent call last):
+            ...
+        TypeError: age must be an integer
 
     Passing in a negative value
         >>> bg.integer_validator("Lyonec", -5)
@@ -84,3 +98,12 @@ FAIL CASES
         Traceback (most recent call last):
             ...
         TypeError: Lyonec must be an integer
+
+    Testing the area Method
+        >>> bg = BaseGeometry()
+        >>> bg.area()
+        Traceback (most recent call last):
+            ...
+        Exception: area() is not implemented
+
+
