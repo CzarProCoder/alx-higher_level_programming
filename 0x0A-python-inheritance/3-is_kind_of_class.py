@@ -7,7 +7,8 @@ Module to check if an obj is a kind of instance to a class
 
 def is_kind_of_class(obj, a_class):
     """
-    Function to check if an object is an instance of, or if the object is an instance of a class
+    Function to check if an object is an instance of,
+    or if the object is an instance of a class
 
     Args:
         obj (Any type): Object to be checked
