@@ -3,8 +3,8 @@
 """
 Script to add all arguments to a python list
 """
-import os
-from sys import argv
+import sys
+import os.path
 
 
 if __name__ == "__main__":
