@@ -26,6 +26,6 @@ class Student:
         else:
             dic = {}
             for att in attrs:
-                if att in self.__dict__(keys):
+                if att in self.__dict__.keys():
                     dic[att] = self.__dict__[att]
             return dic
