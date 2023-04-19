@@ -3,7 +3,6 @@
 """
 Module containing the class Student
 """
-import json
 
 
 class Student:
