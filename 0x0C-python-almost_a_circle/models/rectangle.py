@@ -88,10 +88,12 @@ class Rectangle(Base):
 
     def display(self):
         """Prints to stdout the rectangle instance"""
+        rectangle = self.y * "\n"
         for i in range(self.height):
-            for j in range(self.width):
-                print("#", end="")
-            print("")
+            rectangle += (" " * self.x)
+            rectangle += ("#" * self.width) + "\n"
+
+        print(rectangle, end='')
 
     def __str__(self):
         """Modifies the inbuilt method init"""
