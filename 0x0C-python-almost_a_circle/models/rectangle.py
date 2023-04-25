@@ -101,12 +101,25 @@ class Rectangle(Base):
             self.__class__.__name__, self.id, self.__x, self.__y,
             self.__width, self.__height)
 
-    def update(self, *args, **kwargs):
-        """ update method """
-        if args is not None and len(args) is not 0:
-            list_atr = ['id', 'width', 'height', 'x', 'y']
-            for i in range(len(args)):
-                setattr(self, list_atr[i], args[i])
-        else:
-            for key, value in kwargs.items():
-                setattr(self, key, value)
+    def update(self, *args):
+        """ Update method
+
+        Args:
+            1st Item (int): Item at Index 0 is assigned to the id
+            2nd Item (int): Index 1 -> To width
+            3rd Item (int): Index 2 -> To height
+            4th Item (int): Index 3 -> To x
+            5th Item (int): Index 4 -> To y
+        """
+        if args is not None and len(args) > 0:
+            for key, value in enumerate(args):
+                if k == 0:
+                    self.id = value
+                elif k == 1:
+                    self.width = value
+                elif k == 2:
+                    self.height = value
+                elif k == 3:
+                    self.x = value
+                elif k == 4:
+                    self.y = value
