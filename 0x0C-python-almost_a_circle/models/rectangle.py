@@ -113,13 +113,13 @@ class Rectangle(Base):
         """
         if args is not None and len(args) > 0:
             for key, value in enumerate(args):
-                if k == 0:
+                if key == 0:
                     self.id = value
-                elif k == 1:
+                elif key == 1:
                     self.width = value
-                elif k == 2:
+                elif key == 2:
                     self.height = value
-                elif k == 3:
+                elif key == 3:
                     self.x = value
-                elif k == 4:
+                elif key == 4:
                     self.y = value
