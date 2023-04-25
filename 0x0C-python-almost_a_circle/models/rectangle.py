@@ -134,4 +134,4 @@ class Rectangle(Base):
                 if key == "x":
                     self.x = value
                 if key == "y":
-                    self.y == value
+                    self.y = value
