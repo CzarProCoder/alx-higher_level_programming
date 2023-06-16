@@ -4,7 +4,7 @@
 Script that lists all states from the database hbtn_0e_0_usa
 
 It take 3 arguments: mysql username,
-                    mysql password 
+                    mysql password
                     and database name
 '''
 
