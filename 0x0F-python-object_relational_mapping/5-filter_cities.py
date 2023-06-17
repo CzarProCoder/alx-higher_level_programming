@@ -2,10 +2,10 @@
 
 '''
 Script that takes in the name of a state as an argument
-	and lists all cities of that state
+and lists all cities of that state
 
 The script should take 4 arguments: mysql username,
-	mysql password, database name and state name
+mysql password, database name and state name
 '''
 
 import sys
