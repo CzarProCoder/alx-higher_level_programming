@@ -19,7 +19,7 @@ if __name__ == "__main__":
                  INNER JOIN cities ON states.id = cities.state_id
                  WHERE states.name LIKE %s
                  ORDER BY cities.id ASC""")
-    states = cur.fetchall{}
+    states = cur.fetchall()
     for state in states:
         print(state)
     cur.close()
